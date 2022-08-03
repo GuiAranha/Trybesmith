@@ -24,5 +24,4 @@ export default class ProductsModel {
     const [data] = await this.connection.execute(query);
     return data as Product[];
   }
-
 }

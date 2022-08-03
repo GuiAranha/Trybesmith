@@ -18,5 +18,4 @@ export default class UserModel {
 
     return { id: insertId, ...user };
   }
-
 }
