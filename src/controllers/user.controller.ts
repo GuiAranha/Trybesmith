@@ -7,9 +7,13 @@ export default class UserController {
   };
     
   public createUser = async (req: Request, res: Response) => {
-    const user = req.body;
-    const token = await this.userService.createUser(user);
-    return res.status(201).json({ token });
+    try{
+      const user = req.body;
+      const token = await this.userService.createUser(user);
+      return res.status(201).json({ token });
+    } catch (err) {
+
+    }
   };
 
 }
